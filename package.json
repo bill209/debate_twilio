@@ -1,0 +1,26 @@
+{
+  "name": "debate_twilio",
+  "version": "1.0.0",
+  "description": "for upcoming internal debate",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "http": "0.0.0",
+    "socket.io": "^1.4.5",
+    "twilio": "file:twilio"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bill209/debate_twilio.git"
+  },
+  "author": "bill rowland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bill209/debate_twilio/issues"
+  },
+  "homepage": "https://github.com/bill209/debate_twilio#readme"
+}

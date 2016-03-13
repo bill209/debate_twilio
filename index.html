@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>debate twilio</title>
+		<meta name="description" content="this is an example of twilio as used in an upcoming internal debate">
+		<meta name="author" content="bill rowland">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+
+		<div>
+			<ul>
+				<li id='alpha'>Alpha Beta<img src='check_in_circle.png' class='hide'/></li>
+				<li id='charlie'>Charlie Delta<img src='check_in_circle.png' class='hide'/></li>
+				<li id='echo'>Echo Foxtrot<img src='check_in_circle.png' class='hide'/></li>
+				<li id='golf'>Golf Hotel<img src='check_in_circle.png' class='hide'/></li>
+				<li id='india'>India Joliet<img src='check_in_circle.png' class='hide'/></li>
+				<li id='kilo'>Kilo Lima<img src='check_in_circle.png' class='hide'/></li>
+				<li id='mike'>Mike November<img src='check_in_circle.png' class='hide'/></li>
+			</ul>
+			<p id='message'>this is a message</p>
+		</div>
+
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script>
+			var socket = io();
+			$('li').click(function(){
+				socket.emit('sms_message', $(this).attr('id'));
+				return false;
+			});
+			socket.on('sms_message', function(res){
+				$('#'+res.senderID+' img').removeClass('hide');
+				$('#message').text(res.message);
+			});
+		</script>
+	</body>
+</html>
