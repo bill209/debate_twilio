@@ -1,11 +1,20 @@
 .hide { display: none; }
 
 body {
-	background-color: #000000;
+	background-color: #dddddd;
 	font-family: 'arial', 'verdana';
 	font-size: 28px;
 	color: #fff;
+  width: 400px;
 }
+div { 
+  background-image: url("bull.png"); 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-attachment: contain; 
+  width: 400px;
+}
+
 ul li img {
   width: 32px;
   height: 32px;
@@ -16,6 +25,7 @@ ul li {
 	max-width: 300px;
 	min-width: 200px;
 	width: 80%;
+  opacity: 0.9;
 }
 
 ul li {
@@ -24,7 +34,7 @@ ul li {
 	cursor: pointer;
 
 	/* box borders, corners, shadow */
-	height:30px;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:10px;border:2px solid #dddddd;background-color:#A6CAE3;-webkit-box-shadow: #C9C9C9 4px 4px 4px;-moz-box-shadow: #C9C9C9 4px 4px 4px; box-shadow: #222222 4px 4px 4px;	
+	height:30px;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:10px;border:2px solid #dddddd;background-color:#3192D6;-webkit-box-shadow: #C9C9C9 4px 4px 4px;-moz-box-shadow: #C9C9C9 4px 4px 4px; box-shadow: #222222 4px 4px 4px;	
 }
 
 /* Fade */
@@ -45,3 +55,5 @@ ul li:hover, ul li:focus, ul li:active {
   background-color: #2098d1;
   color: white;
 }
+
+#message { margin-left: 50px; }
